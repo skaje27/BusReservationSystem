@@ -1,4 +1,3 @@
-//ithisham
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
@@ -10,7 +9,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
     JComboBox<Integer> passengerComboBox;
     JRadioButton acRadioButton, nonAcRadioButton;
     JButton bookButton, cancelButton;
-//shrutha
     public BusReservationSystem() {
         setTitle("Bus Reservation System");
         setSize(500, 400);
@@ -24,7 +22,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         passangerLabel=new JLabel("Number Of Passengers:");
         passangerLabel.setBounds(50, 100, 150, 20);
         add(passangerLabel);
-//dhrumil
         passengerComboBox = new JComboBox<Integer>();
         passengerComboBox.addItem(1);
         passengerComboBox.addItem(2);
@@ -47,7 +44,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         sourceComboBox = new JComboBox(sourceList);
         sourceComboBox.setBounds(250, 130, 100, 20);
         add(sourceComboBox);
-//nihmat
         destinationLabel = new JLabel("To:");
         destinationLabel.setBounds(50, 160, 100, 20);
         add(destinationLabel);
@@ -65,7 +61,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         timeComboBox = new JComboBox(timeList);
         timeComboBox.setBounds(250, 190, 100, 20);
         add(timeComboBox);
-//
         seatsLabel = new JLabel("Seats:");
         seatsLabel.setBounds(50, 220, 100, 20);
         add(seatsLabel);
@@ -86,7 +81,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         bookButton.setBounds(100, 280, 80, 30);
         bookButton.addActionListener(this);
         add(bookButton);
-//
         bookButton.addActionListener(this);
 
         cancelButton = new JButton("Cancel");
@@ -100,8 +94,7 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         add(msg);
 
         setVisible(true);
-    }
-//kaushik 
+    } 
     public void actionPerformed(ActionEvent e) {
         msg.setText("Booking successfull");
         if (e.getSource() == bookButton) {
@@ -126,7 +119,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
         }
         
     }
-//rohan
     public int bookSeat(String source, String destination, String time, String busType, int numPassengers) {
         int distance = getDistance(source,time,busType, destination);
         int fare = calculateFare(distance,numPassengers);
@@ -185,7 +177,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
                 return 1190;
             }
         }
-//shravani
         if((source=="Bangalore"&& destination=="Trivandrum") ||(source=="Trivandrum"&& destination=="Bangalore"))
         {
             if((time=="3:00PM"||time=="5:00PM"||time=="8:00PM"||time=="11:30PM")&& busType=="AC")
@@ -239,7 +230,6 @@ public class BusReservationSystem extends JFrame implements ActionListener {
                 return 1525;
             }
         }
-//
         else if((source=="Trivandrum"&& destination=="Hyderabad") ||(source=="Hyderabad"&& destination=="Trivandrum"))
         {
             {
